@@ -1,17 +1,23 @@
 # Model Deployment Project
 
-## Project Goal
+In this project you will build, track, and serve a trip-duration model on the January 2025 NYC Yellow Taxi dataset.
+
+## Main Goal
 
 Train and locally deploy a machine learning model that predicts the duration of New York City yellow taxi trips.
 
 Use:
 
-- `scikit-learn` to train a `RandomForestRegressor`
-- `MLflow` to track experiments locally
-- `FastAPI` to serve predictions through an API
-- a local request client such as `curl` or `requests` to validate the endpoint
+- `scikit-learn` to train a `RandomForestRegressor`,
+- `MLflow` to track experiments locally,
+- `FastAPI` to serve predictions through an API,
+- a local request client such as `curl` or `requests` to validate the endpoint.
 
-This project is intentionally local first.
+## Stretch Goals
+
+- Test your data pipeline, model, or API.
+- Use `GridSearchCV` or `Optuna` for hyperparameter tuning.
+- Compare the tuned model against the baseline and explain whether the extra complexity was worth it.
 
 ## Dataset
 
@@ -19,57 +25,46 @@ Yellow Taxi trip records: [NYC TLC trip record data](https://www1.nyc.gov/site/t
 
 - Year: `2025`
 - Month: `01`
-- Target: trip `duration`
-
-## Core Deliverables
-
-1. Train a baseline `RandomForestRegressor` model.
-2. Track the training run in local MLflow.
-3. Package the preprocessing and model logic into reusable Python code.
-4. Build a prediction API that runs locally.
-5. Send at least one request to the API and confirm that it returns a prediction.
+- Target: `duration`
 
 ## Suggested Workflow
 
 1. Load the January 2025 taxi data and inspect the columns that influence trip duration.
 2. Create a clean training dataset and define the target variable.
 3. Split the data into train and validation sets.
-4. Train a baseline random forest model.
-5. Evaluate the model with RMSE and log the run in MLflow.
+4. Train a baseline `RandomForestRegressor` model.
+5. Evaluate the model with RMSE and log the run to MLflow.
 6. Refactor feature preparation and model loading into modules you can reuse from both training code and the API.
 7. Build a FastAPI app with a `/predict` endpoint.
 8. Run the API locally and send a sample request.
 9. Document your results and tradeoffs in the README.
 
+## Suggested Repository Layout
+
+This repo starts lightweight on purpose. As you implement the project, a practical beginner-friendly structure is:
+
+- `notebooks/`: EDA, feature checks and experiment notes.
+- `src/`: Reusable data preparation, feature engineering and training code
+- `app/`: FastAPI application and prediction schema.
+- `tests/`: Data, model and API tests.
+- `artifacts/`: Saved model files or exports that should not be committed if they are large.
+
 ## Local-First Deployment Guidance
 
-Choose one of these local deployment paths:
+Choose **one** of these local deployment paths:
 
-- run the API directly with `uvicorn`
-- package the API in Docker and run it locally
+- Run the API directly with `uvicorn`
+- Package the API in Docker and run it locally
 
-Keep the deployment workflow easy to build, run, and review on a single machine.
+Keep the deployment workflow easy to build, run and review on a single machine.
 
-## What To Submit
+## Local Data Services
 
-- training code
-- preprocessing or feature engineering code
-- model tracking setup with MLflow
-- a local prediction API
-- one example request to the API
-- a README that explains setup, how to run the project, and the answers to the project questions
+- `MLflow`: Run experiment tracking and inspect runs locally, for example at `http://127.0.0.1:5000`.
+- `FastAPI`: Serve predictions locally, for example at `http://127.0.0.1:8000`.
+- `Docker`: Optional, if you want a containerized local workflow.
 
-## Stretch Goals
+## Answer the following questions in `README.md`
 
-- test your data pipeline, model, or API
-- use `GridSearchCV` or `optuna` for hyperparameter tuning
-- compare the tuned model against the baseline and explain whether the extra complexity was worth it
-
-## Questions To Answer In Your README
-
-1. What is the RMSE of your model?
+1. What is the RMSE of your final model?
 2. What would you do differently if you had more time?
-
-## Submission
-
-Upload your finished project to your own GitHub repository and submit the link. Use pull requests to track your work, even if you are working alone.
