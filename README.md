@@ -29,13 +29,6 @@ flowchart LR
     F --> G["Send local<br>test request"]
 ```
 
-## Mermaid Diagrams
-
-This repository contains Mermaid diagrams. If you want them to render in VS Code, we recommend installing the `Markdown Preview Mermaid Support` extension:
-
-- [Install in VS Code](vscode:extension/bierner.markdown-mermaid)
-- [View on Marketplace](https://marketplace.visualstudio.com/items?itemName=bierner.markdown-mermaid)
-
 ## Environment
 
 Please set up a new virtual environment. You can use the following commands:
