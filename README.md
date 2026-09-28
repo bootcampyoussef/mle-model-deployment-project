@@ -25,7 +25,7 @@ flowchart LR
 
 | File / Folder | Description |
 |---|---|
-| [**Project Brief**](project-for-today.md) | The assignment tasks, suggested workflow, repository layout, and stretch goals. |
+| [**Project Brief**](project-description.md) | The assignment tasks, suggested workflow, repository layout, and stretch goals. |
 
 ### Additional Folders and Files
 
@@ -106,7 +106,7 @@ When you create notebooks (for example in a `notebooks/` folder), select the Pyt
 
 ## How to Use This Repo
 
-1. Read the assignment brief in [project-for-today.md](project-for-today.md).
+1. Read the assignment brief in [project-description.md](project-description.md).
 2. Download and inspect the January 2025 Yellow Taxi dataset.
 3. Train a baseline `RandomForestRegressor` and track runs locally with MLflow.
 4. Refactor preprocessing and training logic into reusable Python modules.
@@ -116,6 +116,8 @@ When you create notebooks (for example in a `notebooks/` folder), select the Pyt
 ### Working Locally
 
 Once you have implemented the project code, a typical local workflow looks like this:
+
+The `app/` package and `sample-request.json` are files you create during the project. Make the sample request match your `/predict` input schema before running the commands below.
 
 1. Train the model and log runs to the local `mlruns/` directory with MLflow.
 2. Start the tracking UI:

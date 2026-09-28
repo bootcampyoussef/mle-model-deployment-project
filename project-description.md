@@ -4,7 +4,7 @@ In this project you will build, track, and serve a trip-duration model on the Ja
 
 ## Main Goal
 
-Train and locally deploy a Machine Learning model that predicts the duration of New York City yellow taxi trips.
+Train and locally deploy a machine learning model that predicts the duration of New York City yellow taxi trips.
 
 Use:
 
