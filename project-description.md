@@ -1,10 +1,10 @@
-# Model Deployment Project
+# Project Description
 
 In this project you will build, track, and serve a trip-duration model on the January 2025 NYC Yellow Taxi dataset.
 
-## Main Goal
+## Main Task
 
-Train and locally deploy a machine learning model that predicts the duration of New York City yellow taxi trips.
+Train and locally deploy a Machine Learning model that predicts the duration of New York City yellow taxi trips.
 
 Use:
 
@@ -13,7 +13,7 @@ Use:
 - `FastAPI` to serve predictions through an API,
 - a local request client such as `curl` or `requests` to validate the endpoint.
 
-## Stretch Goals
+### Stretch Tasks
 
 - Test your data pipeline, model, or API.
 - Use `GridSearchCV` or `Optuna` for hyperparameter tuning.

@@ -25,7 +25,7 @@ flowchart LR
 
 | File / Folder | Description |
 |---|---|
-| [**Project Brief**](project-description.md) | The assignment tasks, suggested workflow, repository layout, and stretch goals. |
+| [**Project Description**](project-description.md) | The assignment tasks, suggested workflow, repository layout, and stretch goals. |
 
 ### Additional Folders and Files
 
@@ -117,8 +117,6 @@ When you create notebooks (for example in a `notebooks/` folder), select the Pyt
 
 Once you have implemented the project code, a typical local workflow looks like this:
 
-The `app/` package and `sample-request.json` are files you create during the project. Make the sample request match your `/predict` input schema before running the commands below.
-
 1. Train the model and log runs to the local `mlruns/` directory with MLflow.
 2. Start the tracking UI:
 
@@ -137,3 +135,5 @@ The `app/` package and `sample-request.json` are files you create during the pro
    ```bash
    curl -X POST http://127.0.0.1:8000/predict -H "Content-Type: application/json" -d @sample-request.json
    ```
+
+The `app/` package and `sample-request.json` are files you create during the project. Make the sample request match your `/predict` input schema before running the commands above.
