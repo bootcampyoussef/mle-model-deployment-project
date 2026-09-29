@@ -91,7 +91,7 @@ uv sync
 
 ---
 
-### 5. Open the Project in VS Code
+### 5. Open the Repository in VS Code
 
 > [!NOTE]
 > Make sure you open VS Code from the project root so it automatically detects the environment created by `uv sync`.
@@ -102,7 +102,7 @@ Launch VS Code in the project root folder:
 code .
 ```
 
-When you create notebooks (for example in a `notebooks/` folder), select the Python environment created by `uv sync` as the kernel.
+If you create a notebook to explore the data, select the Python environment created by `uv sync` as the kernel.
 
 ## How to Use This Repo
 
