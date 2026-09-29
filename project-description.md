@@ -1,10 +1,10 @@
-# Model Deployment Project
+# Project Description
 
 In this project you will build, track, and serve a trip-duration model on the January 2025 NYC Yellow Taxi dataset.
 
-## Main Goal
+## Main Task
 
-Train and locally deploy a machine learning model that predicts the duration of New York City yellow taxi trips.
+Train and locally deploy a Machine Learning model that predicts the duration of New York City yellow taxi trips.
 
 Use:
 
@@ -13,7 +13,7 @@ Use:
 - `FastAPI` to serve predictions through an API,
 - a local request client such as `curl` or `requests` to validate the endpoint.
 
-## Stretch Goals
+### Stretch Tasks
 
 - Test your data pipeline, model, or API.
 - Use `GridSearchCV` or `Optuna` for hyperparameter tuning.
@@ -43,18 +43,18 @@ Yellow Taxi trip records: [NYC TLC trip record data](https://www1.nyc.gov/site/t
 
 This repo starts lightweight on purpose. As you implement the project, a practical beginner-friendly structure is:
 
-- `notebooks/`: EDA, feature checks and experiment notes.
-- `src/`: Reusable data preparation, feature engineering and training code
+- `notebooks/`: EDA, feature checks, and experiment notes.
+- `src/`: Reusable data preparation, feature engineering, and training code.
 - `app/`: FastAPI application and prediction schema.
-- `tests/`: Data, model and API tests.
+- `tests/`: Data, model, and API tests.
 - `artifacts/`: Saved model files or exports that should not be committed if they are large.
 
 ## Local-First Deployment Guidance
 
 Choose **one** of these local deployment paths:
 
-- Run the API directly with `uvicorn`
-- Package the API in Docker and run it locally
+- Run the API directly with `uvicorn`.
+- Package the API in Docker and run it locally.
 
 Keep the deployment workflow easy to build, run and review on a single machine.
 
@@ -64,7 +64,7 @@ Keep the deployment workflow easy to build, run and review on a single machine.
 - `FastAPI`: Serve predictions locally, for example at `http://127.0.0.1:8000`.
 - `Docker`: Optional, if you want a containerized local workflow.
 
-## Answer the following questions in `README.md`
+## Answer the following questions
 
 1. What is the RMSE of your final model?
 2. What would you do differently if you had more time?
