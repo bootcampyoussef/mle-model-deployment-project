@@ -1,0 +1,17 @@
+FROM python:3.13-slim
+
+WORKDIR /app
+
+COPY pyproject.toml uv.lock ./
+
+RUN pip install uv \
+    && uv sync --frozen
+
+COPY app ./app
+COPY artifacts/imputer.joblib ./artifacts/imputer.joblib
+
+ENV MLFLOW_TRACKING_URI=http://host.docker.internal:5000
+
+EXPOSE 8000
+
+CMD ["uv", "run", "uvicorn", "app.main:app", "--host", "0.0.0.0", "--port", "8000"]
